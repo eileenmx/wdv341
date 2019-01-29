@@ -1,11 +1,3 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>wdv341 | php functions</title>
-</head>
-
-<body>
 
 <?php
 	
@@ -46,6 +38,3 @@
 	displayFormattedCurrency($inCurrency);
 	
 	?>
-	
-</body>
-</html>
