@@ -17,20 +17,22 @@
 		$number1=22;
 		$number2=2;
 		$total=$number1 + $number2;	//5. display value of each in the total when added
-
+echo $total;
 	
 		?>
 		
 	<?php
-		$array1=array("PHP", "HTML", "JavaScript"); //6. create an array
-	?>
-		
-		
-	<script>
-		
-		//var array1=["PHP", "HTML", "JavaScript"]; 
+		//var javaScriptArray=["PHP", "HTML", "JavaScript"]; //6. create an array
 	
-	</script>	
+		echo "'PHP', 'HTML', 'JavaScript'";
+	?>
+	
+<script>
+		var javaScriptArray=[<?php echo "'PHP', 'HTML', 'JavaScript'";?>]; //6. create an array
+
+	</script>
+		
+
 	
 
 </body>
