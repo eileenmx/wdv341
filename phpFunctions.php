@@ -1,23 +1,26 @@
 
 <?php
+
 	
-	$date=date_create("05-19-1995");
-	echo date_format($date, "mm/dd/Y"); //1.
-	
-	?>
-	
-	<?php 
-	$date=date_create("19-05-1995");
-	echo date_format($date, "dd/mm/Y"); //2.
-	
-	?>
-	
-	<?php
+function displayDate($inDate) {
+	$inDate=date_create("05-19-1995");
+	echo date_format($inDate, "m/d/Y"); //1.
+}
+	displayDate($inDate);
+
+function displayIntDate($inDate) {
+	$inDate=date_create("19-05-1995");
+	echo date_format($inDate, "d/m/Y"); //2.
+}
+
+	displayIntDate($inDate);
+
 	
 	function displayFormattedString($inString) { //3.
+		$inString="Eileen  ";
 		echo strlen($inString); //3a.
 		echo trim($inString); //3b.
-		echo strtolower($iinString); //3c.
+		echo strtolower($inString); //3c.
 	}
 	
 	displayFormattedString($inString);
