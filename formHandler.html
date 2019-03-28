@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>wdv341 | form handler</title>
+<link href="../../../../Users/eileenmcmanus/website/css/websitess.css" rel="stylesheet" type="text/css" style="text/css">
+        <link href="../../../../Users/eileenmcmanus/website/css/head.css" rel="stylesheet" type="text/css"> <!--head & navbar-->
+        
+		
+</head>
+
+<body>
+<div class="head">
+	<h1><a href="index.html">Eileen<br />McManus</a></h1>
+	<ul>
+	<li><a href="about.html">about</a></li>
+	<li><a href="portfolio.html">portfolio</a></li>
+	<li><a href="hw/hw.html">homework</a></li>
+	</ul>
+</div>	
+       	
+<div class="main-single"> 
+<h1>WDV341 Intro PHP</h1>
+<h2>Basic Form Handler</h2>
+
+<p>This process will display the 'name = value' pairs for all the elements of a form. This summary will on any number of form elements regardless of their name attribute value.</p>
+<p>Use <strong>basicFormExample.php</strong> in the action attribute of your form. </p>
+<p>Field '<strong>name</strong>' - The value of the name attribute from the HTML form element.</p>
+<p>Field <strong>'value</strong>' - The value entered in the field. This will vary depending upon the HTML form element.</p>
+<form id="form1" name="form1" method="post" action="formHandler.php">
+  <p>First Name: 
+    <input type="text" name="firstName" id="firstName" />
+</p>
+  <p>Last Name: 
+    <input type="text" name="lastName" id="lastName" />
+  </p>
+  <p>School: 
+    <input type="text" name="school" id="school" />
+  </p>
+  <p>Gender:<br/>
+  	<input type="radio" name="radio" id="male" value="male"/> Male<br/>
+  	<input type="radio" name="radio" id="female" value="female"/> Female<br/>
+  	<input type="radio" name="radio" id="otherGender" value="other"/> I'd rather not say
+  </p>
+    <p>Class Format:<br/>
+  	<input type="checkbox" name="checkbox" id="online" value="online"/> Online <br/>
+  	<input type="checkbox" name="checkbox" id="onCampus" value="on campus"/> On campus 
+  </p>
+  <p>Degree Type:
+  	<select id="degree" name="select">
+  		<option>Select an option</option>
+  		<option>Associates</option>
+  		<option>Bachelors</option>
+  		<option>Certificate</option>
+  		<option>Other</option>
+  	</select>
+  </p>
+  
+  <p>
+    <input type="submit" name="button" id="button" value="Submit" />
+    <input type="reset" name="button2" id="button2" value="Reset" />
+  </p>
+  
+</form>
+
+<p>&nbsp;</p>
+	</div>
+	  <footer>
+	  <p>Write | mcmanuseileen790@gmail.com<br />
+	  	
+	  	Call | 515.783.8159<br />
+	  	Link | <a href="http://www.linkedin.com/in/eileen-mcmanus" target="_blank">linkedin.com/eileen-mcmanus</a></p>
+	  </footer>
+</body>
+
+</html>
