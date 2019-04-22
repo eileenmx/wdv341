@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>wdv341 | php, json, & ajax</title>
+<script>
+
+	function getProductObject() {
+
+		//alert("insideGetProductObject()");
+
+		var xmlhttp = new XMLHttpRequest();
+		xmlhttp.onreadystatechange = function() {
+		  if (this.readyState == 4 && this.status == 200) {
+			  console.log(this.responseText);
+			var myObj = JSON.parse(this.responseText);
+			document.getElementById("displayProduct").innerHTML = "<br/>Product Name: " + myObj.productName + "<br/>Product Price: " + myObj.productPrice + "<br/>Product Page Count: " + myObj.productPageCount + "<br/>Product ISBN: " + myObj.productISBN;
+		  }
+		};
+		xmlhttp.open("GET", "deliverProduct.php", true);
+		xmlhttp.send();		
+		
+	}
+
+
+
+</script>
+<link href="http://eileenmx.com/css/websitess.css" rel="stylesheet" type="text/css" style="text/css">
+<link href="http://eileenmx.com/css/head.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="head">
+	<h1><a href="http://eileenmx.com/index.html">Eileen<br />McManus</a></h1>
+	<ul>
+	<li><a href="http://eileenmx.com/about.html">about</a></li>
+	<li><a href="http://eileenmx.com/portfolio.html">portfolio</a></li>
+	<li><a href="http://eileenmx.com/hw/hw.html">homework</a></li>
+	</ul>
+</div>	
+<div class="main-single">
+<h1>WDV341 Intro PHP</h1>
+<h2>PHP, JSON, & AJAX</h2>
+<p>This page will use AJAX to call for a PHP page on your server. The PHP page will create a JSON object and 'send' it back to this page where it will be consumed by the page and the contents displayed.</p>
+<h4>Product Information: </h4><p><span id="displayProduct"></span></p>
+<h5><button onClick="getProductObject()">Display Product</button></h5>
+</div>
+		  <footer>
+	  <p>Write | mcmanuseileen790@gmail.com<br />
+	  	
+	  	Call | 515.783.8159<br />
+	  	Link | <a href="http://www.linkedin.com/in/eileen-mcmanus" target="_blank">linkedin.com/eileen-mcmanus</a></p>
+	  </footer>
+</body>
+</html>
